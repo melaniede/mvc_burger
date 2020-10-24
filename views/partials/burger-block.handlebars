@@ -1,0 +1,9 @@
+<li class="list-group-item">
+    {{burger_name}}
+
+    <button class="devour-button btn-info" data-id="{{id}}" data-newdevour="{{devour}}">
+        {{#if devour}}Devour{{else}}Re-order{{/if}}
+    </button>
+
+    <button class="delete-button btn-secondary" data-id="{{this.id}}">Delete</button>
+</li>
