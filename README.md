@@ -22,7 +22,7 @@ Application should allow users to users to submit a burger's name and will displ
 Application should allow users to users to update a burger from the menu to the devoured list.
 Application should allow users to store every burger in a database, whether devoured or not.
 Application should allow users to delete a burger from the database.
-​```
+```
 
 ### Dependencies 
 * [Express](https://www.npmjs.com/package/express)
