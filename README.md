@@ -7,7 +7,7 @@ Use Eat-Da-Burger to track the burgers you have devoured. This burger tracker is
 Get started on tracking your favorite burgers! [Link to app in Heroku](https://pacific-anchorage-71530.herokuapp.com/).
 
 ## Burger Menu
-<img src="public/assets/images/burger_menu.png">
+<img src="public/assets/images/burger_menu.png" width="300" height="300">
 
 ### User Story
 ```
