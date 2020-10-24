@@ -1,21 +1,20 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded
 $(function() {
-    $(".change-sleep").on("click", function(event) {
+    $(".devour-button").on("click", function(event) {
       var id = $(this).data("id");
-      var newSleep = $(this).data("newsleep");
+      var newDevour = $(this).data("newdevour");
   
-      var newSleepState = {
-        devoured: newSleep
+      var newDevourState = {
+        devoured: newDevour
       };
   
-      // Send the PUT request
+      // Send PUT request
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
-        data: newSleepState
+        data: newDevourState
       }).then(
         function() {
-          console.log("changed sleep to", newSleep);
-          // Reload the page to get the updated list
+          // Reload page to get the updated list
           location.reload();
         }
       );
@@ -26,33 +25,30 @@ $(function() {
       event.preventDefault();
   
       var newBurger = {
-        name: $("#ca").val().trim(),
-       // sleepy: $("[name=sleepy]:checked").val().trim()
+        burger_name: $("#ca").val().trim(),
       };
   
-      // Send the POST request.
+      // Send POST request
       $.ajax("/api/burgers", {
         type: "POST",
         data: newBurger
       }).then(
         function() {
-          console.log("created new burger");
-          // Reload the page to get the updated list
+          // Reload page to get the updated list
           location.reload();
         }
       );
     });
   
-    $(".delete-burger").on("click", function(event) {
+    $(".delete-button").on("click", function(event) {
       var id = $(this).data("id");
   
-      // Send the DELETE request.
+      // Send DELETE request
       $.ajax("/api/burgers/" + id, {
         type: "DELETE"
       }).then(
         function() {
-          console.log("deleted burger", id);
-          // Reload the page to get the updated list
+          // Reload page to get the updated list
           location.reload();
         }
       );
